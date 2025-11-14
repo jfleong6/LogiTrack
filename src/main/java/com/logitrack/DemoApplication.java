@@ -1,4 +1,4 @@
-package com.logitrack.demo;
+package com.logitrack;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
