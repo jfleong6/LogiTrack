@@ -131,6 +131,7 @@ html, body {
     border-left: 5px solid #2980b9;
 }
 
+
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
@@ -147,4 +148,109 @@ html, body {
     font-weight: 700;
     color: #2980b9;
     margin-top: 8px;
+}
+
+
+/* ----------------------------- */
+/* Tabla de productos por bodega */
+/* ----------------------------- */
+
+.table-producto-bodega {
+    margin-top: 25px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    max-height: max-content; /* Muestra ±20 filas aprox */
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Tabla */
+.table-producto-bodega table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+/* Encabezado fijo */
+.table-producto-bodega thead {
+    position: sticky;
+    top: 0;
+    background: #2c3e50;
+    color: #fff;
+    z-index: 2;
+}
+
+.table-producto-bodega th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Filas */
+.table-producto-bodega td {
+    padding: 10px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.activo{
+    border-left: 5px solid #20c41b;
+}
+
+/* ----------------------------- */
+/* Botón "Ver productos"         */
+/* ----------------------------- */
+
+.btn-ver-productos {
+    margin-top: 1px;
+    display: inline-block;
+    padding: 5px 5px;
+    background: transparent;
+    color: #0070e0;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0px solid #d0d7dd;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-ver-productos:hover {
+    background: #dce3e9;
+    transform: translateY(-2px);
+}
+
+/* ----------------------------- */
+/* Paginación visual (si aplica) */
+/* ----------------------------- */
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.paginacion button {
+    padding: 6px 12px;
+    background: #ecf0f1;
+    border: 1px solid #cfd4d8;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.paginacion button:hover {
+    background: #dce3e9;
+}
+
+
+.activo_menu{
+    background-color: #0070e0;
+    border-radius: 6px;
+}
+
+.oculto {
+    display: none !important;
 }

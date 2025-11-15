@@ -1,6 +1,7 @@
 package com.logitrack.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.logitrack.service.DashboardService;
@@ -16,7 +17,7 @@ public class DashboardInfoController {
         this.dashboardService = dashboardService;
     }
 
-    @GetMapping("/api/dashboard-info-bodega")
+    @PostMapping("/api/dashboard-info-bodega")
     public Map<String, Object> getDashboardInfo() {
         return dashboardService.obtenerDashboardInfo();
     }

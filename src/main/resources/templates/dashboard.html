@@ -20,11 +20,11 @@
 
                 <nav aria-label="Menú principal">
                     <ul>
-                        <li><a href="#">Bodegas</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li><a href="#">Entradas</a></li>
-                        <li><a href="#">Salidas</a></li>
-                        <li><a href="#">Transferencias</a></li>
+                        <li class="activo_menu"><a href="sec-bodegas">Bodegas</a></li>
+                        <li><a href="sec-productos">Productos</a></li>
+                        <li><a href="sec-entradas">Entradas</a></li>
+                        <li><a href="sec-salidas">Salidas</a></li>
+                        <li><a href="sec-Transferencia">Transferencias</a></li>
                     </ul>
                 </nav>
             </header>
@@ -40,11 +40,11 @@
             <header>
                 <h2>Productos por bodega</h2>
             </header>
-            <section class="bodegas">
-                <section id="productos-bodega" aria-labelledby="productos-bodega-titulo">
+            <section id="sec-bodegas" class="bodegas">
+                <div id="productos-bodega" aria-labelledby="productos-bodega-titulo">
                     <!-- las tarjetas se crean automáticamente -->
-                </section>
-                <section class="table-producto-bodega">
+                </div>
+                <div class="table-producto-bodega">
                     <table>
                         <thead>
                             <tr>
@@ -55,8 +55,25 @@
                         </thead>
                         <tbody id="tbody-productos-bodega"></tbody>
                     </table>
-                </section>
+                </div>
             </section>
+            <section id="sec-productos" class="oculto productos">
+                <p>sec-productos</p>
+            </section>
+
+            <section id="sec-entradas" class="oculto entradas">
+                <p>sec-entradas</p>
+            </section>
+
+            <section id="sec-salidas" class="oculto salidas">
+                <p>sec-salidas</p>
+            </section>
+
+            <section id="sec-Transferencia" class="oculto Transferencia">
+                <p>sec-Transferencia</p>
+            </section>
+
+
 
 
         </main>

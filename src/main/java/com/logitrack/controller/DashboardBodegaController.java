@@ -17,7 +17,7 @@ public class DashboardBodegaController {
     }
 
     // API: listar productos por bodega
-    @GetMapping("/{id}/producto")
+    @PostMapping("/{id}/producto")
     public List<Map<String, Object>> getProductosPorBodega(@PathVariable int id) {
         return bodegaProductoService.obtenerProductosPorBodega(id);
     }

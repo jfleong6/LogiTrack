@@ -5,6 +5,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;   // ← ESTE ES EL BUENO
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,7 @@ public class DashboardController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @GetMapping("/dashboard-data")
+    @PostMapping("/dashboard-data")
     public Map<String, String> dashboardData(Authentication auth) {
 
         // username que viene del JWT
