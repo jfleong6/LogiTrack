@@ -1,57 +1,76 @@
-# LogiTrack - Sistema de Gestión y Auditoría de Bodegas
+# LogiTrack – Sistema de Gestión de Inventarios y Bodegas
 
-## Descripción
-LogiTrack es un sistema backend desarrollado en Spring Boot para la gestión centralizada de múltiples bodegas distribuidas en distintas ciudades. Permite controlar entradas, salidas y transferencias de productos, registrar auditorías y proteger el acceso mediante autenticación JWT.
+LogiTrack es una plataforma desarrollada con **Spring Boot** que permite administrar bodegas, productos y movimientos de inventario en múltiples sedes. Incluye autenticación segura mediante **JWT**, control de roles, registro de auditorías y una interfaz básica en **HTML/CSS/JS** para consumir la API. El proyecto está documentado e incluye ejemplos de endpoints y un esquema arquitectónico que facilita su comprensión y despliegue.
 
-## Características principales
-- Gestión completa de materiales almacenados por bodega.
-- Registro detallado de movimientos de inventario (entradas, salidas, transferencias).
-- Auditoría automática de cambios con historial de operaciones por usuario.
-- Seguridad robusta con roles (ADMIN, EMPLEADO) y autenticación basada en tokens JWT.
-- API REST documentada con Swagger para facilitar integración y pruebas.
-- Persistencia en base de datos PostgreSQL.
+---
 
-## Tecnologías utilizadas
-- Java 17+
-- Spring Boot 3.x
-- Spring Data JPA / Hibernate
-- Spring Security con JWT
-- PostgreSQL 15+
-- Maven como gestor de dependencias
-- Swagger/OpenAPI para documentación
+## 1. Descripción del proyecto
 
-## Estructura del proyecto
-- **/src/main/java:** Código fuente Java con entidades, repositorios, servicios y controladores REST.
-- **/src/main/resources:** Configuración de Spring Boot, propiedades y archivos estáticos.
-- **README.md:** Documentación y guía del proyecto.
-- **/sql:** Scripts para creación de base de datos y carga inicial.
+El sistema centraliza la administración del inventario de varias bodegas ubicadas en distintas ciudades. Permite gestionar productos, registrar movimientos (entradas, salidas, transferencias) y mantener un historial auditado de todas las operaciones realizadas.
 
-## Requisitos previos
-- Java JDK 17 o superior
-- PostgreSQL 15 o superior instalado y configurado
-- Visual Studio Code u otro IDE compatible con Java y Spring
-- Maven 3.6+ instalado
+La aplicación implementa un esquema de seguridad basado en **tokens JWT**, junto con roles de usuario (`ADMIN` y `EMPLEADO`).
 
-## Configuración inicial
-1. Clonar repositorio.
-2. Modificar `src/main/resources/application.properties` para configurar la conexión a PostgreSQL con tus credenciales.
-3. Ejecutar los scripts SQL en `/sql` para crear la base de datos y las tablas.
-4. Importar el proyecto en VS Code y construirlo con Maven.
-5. Ejecutar la aplicación con el comando `./mvnw spring-boot:run` o desde el IDE.
-6. Acceder a la documentación Swagger en `http://localhost:8080/swagger-ui.html`.
+Usuarios iniciales incluidos:
 
-## Uso
-- Para autenticarse, enviar peticiones a `/api/auth/login` con usuario y contraseña.
-- El token JWT obtenido debe ser usado en el encabezado Authorization en peticiones posteriores.
-- Consultar y gestionar bodegas, productos y movimientos a través de los endpoints REST.
+| Usuario | Contraseña | Rol |
+|--------|------------|-----|
+| admi1  | password1  | ADMIN |
+| ventas1 | password1 | EMPLEADO |
+| ventas2 | password1 | EMPLEADO |
+| ventas3 | password1 | EMPLEADO |
+| ventas4 | password1 | EMPLEADO |
 
-## Planes futuros
-- Mejorar interfaz frontend para gestión visual.
-- Añadir notificaciones y alertas de stock bajo.
-- Integración con sistemas ERP externos.
+---
 
-## Autor
-Equipo de Desarrollo LogiTrack
+## 2. Tecnologías utilizadas
 
-## Licencia
-Proyecto para fines académicos/empresariales, sin licencia abierta por ahora.
+- Java 17  
+- Spring Boot 3.5.x  
+- Spring Web  
+- Spring Security + JWT  
+- Spring Data JPA  
+- PostgreSQL 15+  
+- Lombok  
+- Swagger / OpenAPI  
+- Maven 3.8+  
+
+---
+## 3. Estructura del proyecto
+```bash
+logitrack/
+│
+├── backend/
+│   ├── pom.xml
+│   └── src/main/java/com/logitrack/
+│       ├── config/
+│       ├── controller/
+│       ├── dto/
+│       ├── service/
+│       ├── repository/
+│       ├── model/
+│       └── LogiTrackApplication.java
+│
+│   └── src/main/resources/
+│       ├── application.properties
+│       ├── static/       
+│       └── templates/    
+│
+└── README.md
+```
+
+## 4. Instalación y ejecución
+
+### Requisitos previos
+- PostgreSQL 15+  
+- Java JDK 17  
+- Maven 3.6+  
+- Navegador web  
+
+### Pasos
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/logitrack.git
+cd logitrack
+
