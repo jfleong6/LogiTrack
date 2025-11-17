@@ -71,6 +71,6 @@ logitrack/
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/logitrack.git
+git clone https://github.com/jfleong6/LogiTrack
 cd logitrack
 
